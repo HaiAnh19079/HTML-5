@@ -1,16 +1,5 @@
 const navLinkItems = document.querySelectorAll('.nav-link');
 
-const feedbackList = document.querySelector('.feedback-list')
-const feedbackItems = document.querySelectorAll('.feedback-item')
-const feedbackDots = document.querySelector('.feedback-dots')
-const dots = document.querySelectorAll('.dot')
-const totalItems = document.querySelectorAll('.feedback-item').length;
-let itemsPerSlide = 2
-let gap = 30
-const totalSlides = Math.ceil(totalItems / itemsPerSlide);
-console.log(totalSlides)
-let currentIndex = 0;
-
 //nav
 navLinkItems.forEach((item) => {
     item.addEventListener('click', () => {
@@ -24,6 +13,19 @@ navLinkItems.forEach((item) => {
 
 })
 
+
+const feedbackList = document.querySelector('.feedback-list')
+const feedbackItems = document.querySelectorAll('.feedback-item')
+const feedbackDots = document.querySelector('.feedback-dots')
+const dots = document.querySelectorAll('.dot')
+const totalItems = document.querySelectorAll('.feedback-item').length;
+let itemsPerSlide = 2
+let gap = 30
+const totalSlides = Math.ceil(totalItems / itemsPerSlide);
+console.log(totalSlides)
+let currentIndex = 0;
+
+
 // feedback
 function createDots() {
     for (let i = 0; i < totalSlides; i++) {
@@ -33,7 +35,7 @@ function createDots() {
         feedbackDots.appendChild(dot)
 
         dot.addEventListener('click', function () {
-            goToSlide(i); // Khi click vào dot, chuyển đến slide tương ứng
+            goToSlide(i);
         });
     }
 
