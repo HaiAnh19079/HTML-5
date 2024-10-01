@@ -91,40 +91,52 @@
             rel="stylesheet"
         />
 
+        <!-- AOS -->
+        <link
+            href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+            rel="stylesheet"
+        />
+
         <!-- Styles -->
         <link rel="stylesheet" href="./assets/css/reset.css" />
         <link rel="stylesheet" href="./assets/css/styles.css" />
     </head>
     <body>
-        <header class="header">
+        <header class="header fixed">
             <div class="container">
                 <div class="header__inner">
-                    <!-- logo -->
-                    <a href="/">
-                        <img
-                            src="./assets/imgs/logo.svg"
-                            alt="logo"
-                            class="logo-img"
-                        />
-                    </a>
+                    <div class="header-left">
+                        <!-- logo -->
+                        <a href="/">
+                            <img
+                                src="./assets/imgs/logo.svg"
+                                alt="logo"
+                                class="logo-img"
+                            />
+                        </a>
 
-                    <!-- navbar -->
-                    <nav class="navbar">
-                        <ul class="nav-list">
-                            <li class="nav-item">
-                                <a href="#!" class="nav-link"> Home </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#!" class="nav-link"> Products </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#!" class="nav-link"> Features </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#!" class="nav-link"> Blog </a>
-                            </li>
-                        </ul>
-                    </nav>
+                        <!-- navbar -->
+                        <nav class="navbar">
+                            <ul class="nav-list">
+                                <li class="nav-item">
+                                    <a href="/" class="nav-link"> Home </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#products" class="nav-link">
+                                        Products
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#features" class="nav-link">
+                                        Features
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#blog" class="nav-link"> Blog </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
 
                     <!-- btn actions -->
                     <div class="header-action">
@@ -135,12 +147,17 @@
             </div>
         </header>
 
-        <main class="main" style="height: 5000px">
+        <main class="main">
             <!-- hero -->
             <section class="hero">
                 <div class="container">
                     <div class="hero__inner">
-                        <div class="hero-info">
+                        <div
+                            class="hero-info"
+                            data-aos="fade-right"
+                            data-aos-duration="600"
+                            data-aos-easing="ease-in-out"
+                        >
                             <span class="section-title">
                                 Digital Smart Wallet
                             </span>
@@ -149,7 +166,7 @@
                                 <strong class="text-highlight">Payment</strong>
                                 For Everyone.
                             </h1>
-                            <span class="section-desc hero-desc">
+                            <span class="section-desc-18 hero-desc">
                                 We bring together eveything that’s required to
                                 build websites and apps that accept payments and
                                 send payouts globally. We are the best platform.
@@ -159,6 +176,9 @@
                                 class="hero-form"
                                 action="#!"
                                 autocomplete="off"
+                                data-aos="fade-up-right"
+                                data-aos-duration="600"
+                                data-aos-easing="linear"
                             >
                                 <input
                                     class="hero-input"
@@ -179,7 +199,12 @@
                                 </span>
                             </form>
                         </div>
-                        <div class="hero-media">
+                        <div
+                            class="hero-media"
+                            data-aos="fade-left"
+                            data-aos-duration="600"
+                            data-aos-easing="ease-in-out"
+                        >
                             <figure class="hero-image-wrap">
                                 <img
                                     src="./assets/imgs/hero-mobile-png.png"
@@ -188,7 +213,12 @@
                                 />
 
                                 <!-- Deposite -->
-                                <div class="hero__deposite">
+                                <div
+                                    class="hero__deposite"
+                                    data-aos="zoom-in-right"
+                                    data-aos-duration="800"
+                                    data-aos-easing="linear"
+                                >
                                     <img
                                         src="./assets/icons/deposit-icon.svg"
                                         alt=""
@@ -201,13 +231,23 @@
                                 </div>
 
                                 <!-- Interest -->
-                                <div class="hero__interest">
+                                <div
+                                    class="hero__interest"
+                                    data-aos="zoom-in-left"
+                                    data-aos-duration="800"
+                                    data-aos-easing="linear"
+                                >
                                     <strong class="interest-percent">0%</strong>
                                     <span>Interest</span>
                                 </div>
 
                                 <!-- secured funds -->
-                                <div class="hero__secured-funds">
+                                <div
+                                    class="hero__secured-funds"
+                                    data-aos="zoom-out-left"
+                                    data-aos-duration="800"
+                                    data-aos-easing="linear"
+                                >
                                     <img
                                         src="./assets/icons/secured-icon.svg"
                                         alt=""
@@ -227,11 +267,16 @@
             </section>
 
             <!-- works -->
-            <section class="works">
+            <section class="works" id="products">
                 <div class="container">
                     <div class="works__inner">
                         <div class="works-media">
-                            <figure class="works-media__img-wrap">
+                            <figure
+                                class="works-media__img-wrap"
+                                data-aos="zoom-in"
+                                data-aos-duration="800"
+                                data-aos-easing="linear"
+                            >
                                 <img
                                     src="./assets/imgs/works-01.png"
                                     alt=""
@@ -240,52 +285,63 @@
                             </figure>
 
                             <!-- icon 1 -->
-                            <svg
-                                class="works-icon icon-1"
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="64"
-                                height="64"
-                                viewBox="0 0 64 64"
-                                fill="none"
+                            <div
+                                class="works-icon"
+                                data-aos="zoom-in-down"
+                                data-aos-easing="linear"
+                                data-aos-duration="600"
                             >
-                                <rect
+                                <svg
+                                    class="icon-1"
+                                    xmlns="http://www.w3.org/2000/svg"
                                     width="64"
                                     height="64"
-                                    rx="8"
-                                    fill="#7264D6"
-                                />
-                                <rect
-                                    x="12"
-                                    y="12"
-                                    width="40"
-                                    height="40"
-                                    rx="4"
-                                    fill="#F8FBFE"
-                                />
-                                <path
-                                    d="M44.9745 40.5386H18.8143C18.3647 40.5386 18.0002 40.903 18.0002 41.3527C18.0002 42.7016 19.0937 43.795 20.4426 43.795H43.3463C44.6951 43.795 45.7886 42.7016 45.7886 41.3527C45.7886 40.903 45.4241 40.5386 44.9745 40.5386Z"
-                                    fill="#7264D6"
-                                />
-                                <path
-                                    d="M38.4075 25.0705V24.6635C38.4075 24.355 38.2334 24.0736 37.9575 23.9352L32.2587 21.0858C32.0298 20.9714 31.7595 20.9714 31.5305 21.0858L25.8317 23.9352C25.5558 24.0736 25.3817 24.355 25.3817 24.6635V25.0705C25.3817 25.5205 25.7458 25.8847 26.1958 25.8847H37.5934C38.0434 25.8847 38.4075 25.5205 38.4075 25.0705Z"
-                                    fill="#7264D6"
-                                />
-                                <path
-                                    d="M27.824 27.5128H31.0804V34.0257H27.824V27.5128Z"
-                                    fill="#7264D6"
-                                />
-                                <path
-                                    d="M32.7084 27.5128H35.9649V34.0257H32.7084V27.5128Z"
-                                    fill="#7264D6"
-                                />
-                                <path
-                                    d="M23.8099 24.2563H20.4427C19.9927 24.2563 19.6285 24.6205 19.6285 25.0705V38.9104H44.1605V25.0705C44.1605 24.6205 43.7963 24.2563 43.3464 24.2563H39.9791C40.0018 24.3912 40.0356 24.5232 40.0356 24.6634V25.0705C40.0356 26.4172 38.9401 27.5128 37.5933 27.5128V34.0257H38.4074C38.8574 34.0257 39.2215 34.3898 39.2215 34.8398C39.2215 35.2898 38.8574 35.6539 38.4074 35.6539H25.3816C24.9316 35.6539 24.5675 35.2898 24.5675 34.8398C24.5675 34.3898 24.9316 34.0257 25.3816 34.0257H26.1957V27.5128C24.849 27.5128 23.7534 26.4172 23.7534 25.0705V24.6634C23.7534 24.5232 23.7872 24.3912 23.8099 24.2563Z"
-                                    fill="#7264D6"
-                                />
-                            </svg>
-
+                                    viewBox="0 0 64 64"
+                                    fill="none"
+                                >
+                                    <rect
+                                        width="64"
+                                        height="64"
+                                        rx="8"
+                                        fill="#7264D6"
+                                    />
+                                    <rect
+                                        x="12"
+                                        y="12"
+                                        width="40"
+                                        height="40"
+                                        rx="4"
+                                        fill="#F8FBFE"
+                                    />
+                                    <path
+                                        d="M44.9745 40.5386H18.8143C18.3647 40.5386 18.0002 40.903 18.0002 41.3527C18.0002 42.7016 19.0937 43.795 20.4426 43.795H43.3463C44.6951 43.795 45.7886 42.7016 45.7886 41.3527C45.7886 40.903 45.4241 40.5386 44.9745 40.5386Z"
+                                        fill="#7264D6"
+                                    />
+                                    <path
+                                        d="M38.4075 25.0705V24.6635C38.4075 24.355 38.2334 24.0736 37.9575 23.9352L32.2587 21.0858C32.0298 20.9714 31.7595 20.9714 31.5305 21.0858L25.8317 23.9352C25.5558 24.0736 25.3817 24.355 25.3817 24.6635V25.0705C25.3817 25.5205 25.7458 25.8847 26.1958 25.8847H37.5934C38.0434 25.8847 38.4075 25.5205 38.4075 25.0705Z"
+                                        fill="#7264D6"
+                                    />
+                                    <path
+                                        d="M27.824 27.5128H31.0804V34.0257H27.824V27.5128Z"
+                                        fill="#7264D6"
+                                    />
+                                    <path
+                                        d="M32.7084 27.5128H35.9649V34.0257H32.7084V27.5128Z"
+                                        fill="#7264D6"
+                                    />
+                                    <path
+                                        d="M23.8099 24.2563H20.4427C19.9927 24.2563 19.6285 24.6205 19.6285 25.0705V38.9104H44.1605V25.0705C44.1605 24.6205 43.7963 24.2563 43.3464 24.2563H39.9791C40.0018 24.3912 40.0356 24.5232 40.0356 24.6634V25.0705C40.0356 26.4172 38.9401 27.5128 37.5933 27.5128V34.0257H38.4074C38.8574 34.0257 39.2215 34.3898 39.2215 34.8398C39.2215 35.2898 38.8574 35.6539 38.4074 35.6539H25.3816C24.9316 35.6539 24.5675 35.2898 24.5675 34.8398C24.5675 34.3898 24.9316 34.0257 25.3816 34.0257H26.1957V27.5128C24.849 27.5128 23.7534 26.4172 23.7534 25.0705V24.6634C23.7534 24.5232 23.7872 24.3912 23.8099 24.2563Z"
+                                        fill="#7264D6"
+                                    />
+                                </svg>
+                            </div>
                             <!-- Congratulations -->
-                            <div class="congratulations">
+                            <div
+                                class="congratulations"
+                                data-aos="fade-left"
+                                data-aos-easing="ease-out-cubic"
+                                data-aos-duration="600"
+                            >
                                 <div class="cong-icon__wrap">
                                     <div class="cong-icon">
                                         <svg
@@ -324,32 +380,47 @@
                             </h2>
 
                             <ul class="works-content__list">
-                                <li class="works-item">
+                                <li
+                                    class="works-item"
+                                    data-aos="zoom-in-up"
+                                    data-aos-duration="600"
+                                    data-aos-easing="linear"
+                                >
                                     <h3 class="works-item__heading">
                                         1. Open a High Interest Checking account
                                     </h3>
-                                    <p class="works-item__desc">
+                                    <p class="section-desc-16 works-item__desc">
                                         Fund your bank account with a minimum
                                         balance of $100. Enroll in 3 minutes or
                                         less!
                                     </p>
                                 </li>
-                                <li class="works-item">
+                                <li
+                                    class="works-item"
+                                    data-aos="zoom-in-up"
+                                    data-aos-duration="600"
+                                    data-aos-easing="linear"
+                                >
                                     <h3 class="works-item__heading">
                                         2. 10 point-of-sale transactions each
                                         Month that are at least $10 each.
                                     </h3>
-                                    <p class="works-item__desc">
+                                    <p class="section-desc-16 works-item__desc">
                                         Be sure to use your rewards checking
                                         account as often as possible in order to
                                         accue APYI
                                     </p>
                                 </li>
-                                <li class="works-item">
+                                <li
+                                    class="works-item"
+                                    data-aos="zoom-in-up"
+                                    data-aos-duration="600"
+                                    data-aos-easing="linear"
+                                >
                                     <h3 class="works-item__heading">
                                         3. Receive up to 5.50% APY
                                     </h3>
-                                    <p class="works-item__desc">
+                                    <p class="section-desc-16 works-item__desc">
                                         The APY you earn will be based on your
                                         account balance and satisfying the
                                         transaction requirement.
@@ -362,23 +433,48 @@
             </section>
 
             <!-- payments -->
-            <section class="payments">
+            <section class="payments" id="features">
                 <div class="container">
                     <div class="payments__inner">
-                        <div class="payments-content">
-                            <span class="section-title">
+                        <div
+                            class="payments-content"
+                            data-aos="zoom-out"
+                            data-aos-duration="600"
+                            data-aos-easing="linear"
+                        >
+                            <span
+                                class="section-title"
+                                data-aos="zoom-in-up"
+                                data-aos-duration="600"
+                                data-aos-easing="linear"
+                            >
                                 Digital Smart Wallet
                             </span>
-                            <h2 class="section-heading payments-heading">
+                            <h2
+                                class="section-heading payments-heading"
+                                data-aos="zoom-in-up"
+                                data-aos-duration="600"
+                                data-aos-easing="linear"
+                            >
                                 One Card For All Your Payments
                             </h2>
-                            <p class="section-desc payments-desc">
+                            <p
+                                class="section-desc-18 payments-desc"
+                                data-aos="zoom-in-up"
+                                data-aos-duration="600"
+                                data-aos-easing="linear"
+                            >
                                 We bring together eveything that’s required to
                                 build websites and apps that accept payments and
                                 send payouts globally. We are the best platform.
                             </p>
 
-                            <ul class="payments-list">
+                            <ul
+                                class="payments-list"
+                                data-aos="zoom-in-up"
+                                data-aos-duration="600"
+                                data-aos-easing="linear"
+                            >
                                 <li>
                                     <a class="payments-item" href="#!">
                                         Global Payments
@@ -396,12 +492,22 @@
                                 </li>
                             </ul>
 
-                            <a href="#!" class="btn payments-btn">
+                            <a
+                                href="#!"
+                                class="btn payments-btn"
+                                data-aos="zoom-in-up"
+                                data-aos-duration="600"
+                                data-aos-easing="linear"
+                            >
                                 Get Started
                             </a>
                         </div>
                         <div class="payments-media">
-                            <figure class="payments__card-wrap">
+                            <figure
+                                class="payments__card-wrap"
+                                data-aos="flip-right"
+                                data-aos-duration="700"
+                            >
                                 <img
                                     src="./assets/icons/decor-card-01.svg"
                                     alt=""
@@ -453,7 +559,13 @@
                                 </div>
                             </figure>
 
-                            <article class="send-money">
+                            <article
+                                class="send-money"
+                                data-aos="fade-down-left"
+                                data-aos-duration="600"
+                                data-aos-delay="300"
+                                data-aos-easing="linear"
+                            >
                                 <figure class="send-icon__wrap">
                                     <img
                                         src="./assets/icons/plane.svg"
@@ -481,7 +593,13 @@
                                 </div>
                             </article>
 
-                            <article class="income">
+                            <article
+                                class="income"
+                                data-aos="fade-up-left"
+                                data-aos-duration="600"
+                                data-aos-delay="300"
+                                data-aos-easing="linear"
+                            >
                                 <div class="income__icon-wrap">
                                     <img
                                         src="./assets/icons/income.svg"
@@ -502,7 +620,12 @@
                 <div class="container">
                     <div class="payment2__inner">
                         <div class="payment2-media">
-                            <figure class="payment2-media__img-wrap">
+                            <figure
+                                class="payment2-media__img-wrap"
+                                data-aos="flip-left"
+                                data-aos-duration="600"
+                                data-aos-easing="linear"
+                            >
                                 <img
                                     src="./assets/imgs/payment2-01.png"
                                     alt=""
@@ -510,7 +633,13 @@
                                 />
                             </figure>
 
-                            <div class="method-choose">
+                            <div
+                                class="method-choose"
+                                data-aos="zoom-in"
+                                data-aos-delay="200"
+                                data-aos-duration="600"
+                                data-aos-easing="linear"
+                            >
                                 <h3 class="method-title">
                                     Choose payment method:
                                 </h3>
@@ -593,20 +722,40 @@
 
                         <div class="payment2-content">
                             <div class="payment2-content">
-                                <span class="section-title">
+                                <span
+                                    class="section-title"
+                                    data-aos="zoom-in-up"
+                                    data-aos-duration="600"
+                                    data-aos-easing="linear"
+                                >
                                     Digital Smart Wallet
                                 </span>
-                                <h2 class="section-heading payments-heading">
+                                <h2
+                                    class="section-heading payments-heading"
+                                    data-aos="zoom-in-up"
+                                    data-aos-duration="600"
+                                    data-aos-easing="linear"
+                                >
                                     Transfer and Deposite Your Money Anytime
                                 </h2>
-                                <p class="section-desc payments-desc">
+                                <p
+                                    class="section-desc-18 payments-desc"
+                                    data-aos="zoom-in-up"
+                                    data-aos-duration="600"
+                                    data-aos-easing="linear"
+                                >
                                     We bring together eveything that’s required
                                     to build websites and apps that accept
                                     payments and send payouts globally. We are
                                     the best platform.
                                 </p>
 
-                                <ul class="payments-list">
+                                <ul
+                                    class="payments-list"
+                                    data-aos="zoom-in-up"
+                                    data-aos-duration="600"
+                                    data-aos-easing="linear"
+                                >
                                     <li>
                                         <a class="payments-item" href="#!">
                                             Powerfull App
@@ -624,7 +773,13 @@
                                     </li>
                                 </ul>
 
-                                <a href="#!" class="btn payments-btn">
+                                <a
+                                    href="#!"
+                                    class="btn payments-btn"
+                                    data-aos="fade-up"
+                                    data-aos-duration="600"
+                                    data-aos-easing="linear"
+                                >
                                     Get Started
                                 </a>
                             </div>
@@ -636,13 +791,28 @@
             <section class="feedback">
                 <div class="container">
                     <div class="feedback__inner">
-                        <span class="section-title feedback-title">
+                        <span
+                            class="section-title feedback-title"
+                            data-aos="fade-up"
+                            data-aos-duration="600"
+                            data-aos-easing="linear"
+                        >
                             Our Testimonial
                         </span>
-                        <h2 class="section-heading feedback-heading">
+                        <h2
+                            class="section-heading feedback-heading"
+                            data-aos="fade-up"
+                            data-aos-duration="600"
+                            data-aos-easing="linear"
+                        >
                             What Clients Says
                         </h2>
-                        <p class="section-desc feedback-desc">
+                        <p
+                            class="section-desc-16 feedback-desc"
+                            data-aos="fade-up"
+                            data-aos-duration="600"
+                            data-aos-easing="linear"
+                        >
                             Read what clients says about us and about our online
                             <br />
                             banking services that may inspire you
@@ -652,7 +822,12 @@
                             <div class="feedback-list">
                                 <!-- fb item 1 -->
                                 <article class="feedback-item">
-                                    <div class="blockquote-wrap">
+                                    <div
+                                        class="blockquote-wrap"
+                                        data-aos="zoom-in-right"
+                                        data-aos-duration="600"
+                                        data-aos-easing="linear"
+                                    >
                                         <blockquote
                                             class="feedback-item__quote"
                                         >
@@ -681,7 +856,12 @@
 
                                 <!-- fb item 2 -->
                                 <article class="feedback-item">
-                                    <div class="blockquote-wrap">
+                                    <div
+                                        class="blockquote-wrap"
+                                        data-aos="zoom-in-left"
+                                        data-aos-duration="600"
+                                        data-aos-easing="linear"
+                                    >
                                         <blockquote
                                             class="feedback-item__quote"
                                         >
@@ -879,16 +1059,21 @@
             </section>
 
             <!-- blog -->
-            <section class="blog">
+            <section class="blog" id="blog">
                 <div class="container">
                     <div class="blog__inner">
-                        <div class="row blog-row">
+                        <div
+                            class="row blog-row"
+                            data-aos="fade-up"
+                            data-aos-duration="600"
+                            data-aos-easing="linear"
+                        >
                             <div class="blog-head">
                                 <span class="section-title">Our Blog</span>
                                 <h2 class="section-heading blog-heading">
                                     Get The Updates
                                 </h2>
-                                <p class="section-desc blog-desc">
+                                <p class="section-desc-16 blog-desc">
                                     Read our blog for the regular updates about
                                     us and about our online banking services
                                     that may inspire you
@@ -899,7 +1084,12 @@
 
                         <div class="blog-list">
                             <!-- item 1 -->
-                            <article class="blog-item">
+                            <article
+                                class="blog-item"
+                                data-aos="fade-up"
+                                data-aos-duration="300"
+                                data-aos-easing="linear"
+                            >
                                 <a href="#!">
                                     <figure class="blog-item__img-wrap">
                                         <img
@@ -925,7 +1115,12 @@
                                 </div>
                             </article>
                             <!-- item 2 -->
-                            <article class="blog-item">
+                            <article
+                                class="blog-item"
+                                data-aos="fade-up"
+                                data-aos-duration="300"
+                                data-aos-easing="linear"
+                            >
                                 <a href="#!">
                                     <figure class="blog-item__img-wrap">
                                         <img
@@ -951,7 +1146,12 @@
                                 </div>
                             </article>
                             <!-- item 3  -->
-                            <article class="blog-item">
+                            <article
+                                class="blog-item"
+                                data-aos="fade-up"
+                                data-aos-duration="300"
+                                data-aos-easing="linear"
+                            >
                                 <a href="#!">
                                     <figure class="blog-item__img-wrap">
                                         <img
@@ -977,7 +1177,12 @@
                                 </div>
                             </article>
                             <!-- item 4 -->
-                            <article class="blog-item">
+                            <article
+                                class="blog-item"
+                                data-aos="fade-up"
+                                data-aos-duration="300"
+                                data-aos-easing="linear"
+                            >
                                 <a href="#!">
                                     <figure class="blog-item__img-wrap">
                                         <img
@@ -1006,9 +1211,229 @@
                     </div>
                 </div>
             </section>
+
+            <!-- app -->
+            <section class="app">
+                <div class="container">
+                    <div class="app__inner">
+                        <span
+                            class="section-title app-title"
+                            data-aos="zoom-in-up"
+                            data-aos-duration="600"
+                            data-aos-easing="linear"
+                            >Our App</span
+                        >
+                        <h2
+                            class="section-heading app-heading"
+                            data-aos="zoom-in-up"
+                            data-aos-duration="600"
+                            data-aos-easing="linear"
+                        >
+                            Download the Apps
+                        </h2>
+                        <p
+                            class="section-desc-16 app-desc"
+                            data-aos="zoom-in-up"
+                            data-aos-duration="600"
+                            data-aos-easing="linear"
+                        >
+                            Download our mobile apps and get started today with
+                            a special online bank and move faster
+                        </p>
+
+                        <div
+                            class="app__cta-btns"
+                            data-aos="zoom-in-up"
+                            data-aos-duration="600"
+                            data-aos-easing="linear"
+                        >
+                            <a href="#!" class="btn app__cta-btn">
+                                <img
+                                    src="./assets/icons/google-play.svg"
+                                    alt=""
+                                    class="app__btn-icon"
+                                />
+                            </a>
+                            <a href="#!" class="btn app__cta-btn">
+                                <img
+                                    src="./assets/icons/app-store.svg"
+                                    alt=""
+                                    class="app__btn-icon"
+                                />
+                            </a>
+                        </div>
+
+                        <div class="app-decor">
+                            <img
+                                src="./assets/icons/app-star.svg"
+                                alt=""
+                                class="app-star"
+                            />
+                            <img
+                                src="./assets/icons/app-star.svg"
+                                alt=""
+                                class="app-star"
+                            />
+                            <img
+                                src="./assets/icons/app-star.svg"
+                                alt=""
+                                class="app-star"
+                            />
+                            <img
+                                src="./assets/icons/app-star.svg"
+                                alt=""
+                                class="app-star"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </section>
         </main>
 
-        <div class="firebase"></div>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__inner">
+                    <div class="row footer-top">
+                        <!-- logo -->
+                        <a
+                            href="/"
+                            data-aos="fade-up"
+                            data-aos-duration="600"
+                            data-aos-easing="linear"
+                        >
+                            <img
+                                src="./assets/imgs/logo.svg"
+                                alt="logo"
+                                class="logo-img"
+                            />
+                        </a>
+
+                        <div
+                            class="footer-column"
+                            data-aos="fade-up"
+                            data-aos-duration="600"
+                            data-aos-easing="linear"
+                        >
+                            <h3 class="footer-heading">Sitemap</h3>
+
+                            <ul class="footer-links-list">
+                                <li class="footer-link-item">
+                                    <a href="#!" class="footer-link">Home</a>
+                                </li>
+                                <li class="footer-link-item">
+                                    <a href="#!" class="footer-link">Abouts</a>
+                                </li>
+                                <li class="footer-link-item">
+                                    <a href="#!" class="footer-link">Growers</a>
+                                </li>
+                                <li class="footer-link-item">
+                                    <a href="#!" class="footer-link">
+                                        Merchants
+                                    </a>
+                                </li>
+                                <li class="footer-link-item">
+                                    <a href="#!" class="footer-link">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div
+                            class="footer-column"
+                            data-aos="fade-up"
+                            data-aos-duration="600"
+                            data-aos-easing="linear"
+                        >
+                            <h3 class="footer-heading">Socials</h3>
+                            <ul class="footer-links-list">
+                                <li class="footer-link-item">
+                                    <a href="#!" class="footer-link">
+                                        Facebook
+                                    </a>
+                                </li>
+                                <li class="footer-link-item">
+                                    <a href="#!" class="footer-link">
+                                        Linkedin
+                                    </a>
+                                </li>
+                                <li class="footer-link-item">
+                                    <a href="#!" class="footer-link">
+                                        Instagram
+                                    </a>
+                                </li>
+                                <li class="footer-link-item">
+                                    <a href="#!" class="footer-link">Twitter</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div
+                            class="footer-column"
+                            data-aos="fade-up"
+                            data-aos-duration="600"
+                            data-aos-easing="linear"
+                        >
+                            <h3 class="footer-heading">Head Office</h3>
+                            <p class="section-desc-18 footer-desc">
+                                Xilliams Corner Wine © 2017. 1112 A Market St #
+                                Ste B22, Charlottesville, CA 45565
+                            </p>
+
+                            <h3
+                                class="footer-heading"
+                                data-aos="fade-left"
+                                data-aos-duration="600"
+                                data-aos-easing="linear"
+                            >
+                                News letter
+                            </h3>
+                            <form
+                                action="#!"
+                                class="footer-form"
+                                autocomplete="off"
+                                data-aos="fade-left"
+                                data-aos-duration="600"
+                                data-aos-easing="linear"
+                            >
+                                <input
+                                    type="email"
+                                    class="form__input-email section-desc-16"
+                                    placeholder="Email address..."
+                                />
+                                <button
+                                    type="submit"
+                                    class="btn btn--primary form__submit-btn"
+                                >
+                                    Subscribe
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                    <div
+                        class="row footer-bottom"
+                        data-aos="fade-up"
+                        data-aos-duration="600"
+                        data-aos-easing="linear"
+                    >
+                        <span class="footer-link footer-email-address">
+                            email@gmail.com
+                        </span>
+                        <span class="footer-link footer-phone"
+                            >(123) 456-7890</span
+                        >
+                    </div>
+                </div>
+            </div>
+            <div class="copyright section-desc-16">
+                © 2020 Ligft Media All rights reserved.
+            </div>
+        </footer>
+
+        <!-- AOS -->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+
         <script src="./assets/js/js.js"></script>
     </body>
 </html>

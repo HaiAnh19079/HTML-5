@@ -93,7 +93,7 @@ button {
 }
 
 .btn:hover {
-    opacity: 0.9;
+    opacity: 0.9 !important;
     cursor: pointer;
 }
 
@@ -131,12 +131,20 @@ button {
     line-height: 1.25;
 }
 
-.section-desc {
+.section-desc-18,
+.footer-link {
     color: #696d76;
     font-family: 'Open Sans';
     font-size: 1.8rem;
     font-weight: 400;
     line-height: 1.67;
+}
+.section-desc-16 {
+    color: #696d76;
+    font-family: 'Open Sans';
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.75;
 }
 /* Header */
 
@@ -150,12 +158,21 @@ button {
     width: 100%;
     z-index: 10;
     transition: top 0.3s, background-color 0.3s, padding-bottom 0.3s ease;
+    border-bottom: 1px solid #e8ebed;
+    padding-bottom: 10px;
+    background: #fff;
 }
 
 .header__inner {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 70px;
 }
 
 .logo-img {
@@ -233,7 +250,7 @@ button {
 /* Hero */
 
 .hero {
-    margin-top: 50px;
+    margin-top: 66px;
 }
 
 .hero__inner {
@@ -473,16 +490,14 @@ button {
 
 .works-item__desc {
     margin-top: 16px;
-    color: #696d76;
-    font-size: 1.6rem;
-    font-weight: 400;
-    line-height: 1.75;
 }
 
 .works-icon {
     position: absolute;
     top: 76px;
     right: 55px;
+
+    animation: beat 1s infinite;
 }
 
 .congratulations {
@@ -872,6 +887,7 @@ button {
     height: 90px;
     border-radius: 50%;
     overflow: hidden;
+    animation: beat 1s infinite;
 }
 
 .method-decor__img-wrap {
@@ -1024,8 +1040,6 @@ button {
 }
 .feedback-desc {
     margin-top: 18px;
-    font-size: 1.6rem;
-    line-height: 1.75;
 }
 
 /* blog */
@@ -1042,8 +1056,6 @@ button {
 .blog-desc {
     width: 435px;
     margin-top: 18px;
-    font-size: 1.6rem;
-    line-height: 1.75;
 }
 
 .blog-link-btn {
@@ -1116,4 +1128,185 @@ button {
 
 .blog-item__link:hover {
     color: #7264d6;
+}
+
+/* app */
+
+.app {
+    margin-top: 160px;
+}
+
+.app__inner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 24px;
+    background: #7264d6;
+    padding: 100px 0;
+}
+
+.app-title,
+.app-heading,
+.app-desc {
+    color: #fff;
+}
+
+.app-desc {
+    width: 435px;
+    margin-top: 18px;
+}
+
+.app-title.section-title::before {
+    background: #fff;
+}
+
+.app__cta-btns {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 38px;
+}
+
+.app__cta-btn {
+    --height: initial;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    padding: 18px 30px;
+}
+
+.app-star {
+    position: absolute;
+    animation: spinner 3s infinite linear;
+}
+
+.app-star:nth-child(1) {
+    top: 49px;
+    left: 112px;
+}
+.app-star:nth-child(2) {
+    top: 49px;
+    right: 112px;
+}
+.app-star:nth-child(3) {
+    bottom: 49px;
+    left: 166px;
+}
+.app-star:nth-child(4) {
+    bottom: 49px;
+    right: 166px;
+}
+
+@keyframes spinner {
+    0% {
+        rotate: 0deg;
+        scale: 1;
+    }
+
+    50% {
+        rotate: 180deg;
+        scale: 0.5;
+    }
+    100% {
+        rotate: 360deg;
+        scale: 1;
+    }
+}
+
+/* footer */
+
+.footer {
+    margin-top: 100px;
+    background: #fafbff;
+}
+
+.footer__inner {
+    padding-top: 100px;
+}
+
+.footer-top {
+    display: flex;
+    gap: 163px;
+}
+
+.footer-column:nth-child(4) {
+    flex: 1;
+}
+
+.footer-heading {
+    color: #212832;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.67;
+    margin-bottom: 24px;
+}
+
+.footer-link-item + .footer-link-item {
+    margin-top: 14px;
+}
+
+.footer-desc {
+    width: 371px;
+    margin-bottom: 48px;
+}
+
+.footer-link {
+    opacity: 0.75;
+}
+
+.footer-form {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    width: 100%;
+}
+
+.form__input-email {
+    flex: 1;
+    border-radius: 6px;
+    border: 1px solid #8e919a;
+    outline: none;
+    padding: 12px;
+}
+
+.form__submit-btn {
+    min-width: 113px;
+}
+
+.footer-bottom {
+    margin-top: 54px;
+    margin-bottom: 28px;
+    gap: 100px;
+}
+
+.footer-email-address,
+.footer-phone {
+    display: block;
+    text-decoration: underline;
+}
+
+.copyright {
+    text-align: center;
+    padding: 28px 0;
+    width: 100%;
+    color: #fff;
+    background: #7264d6;
+}
+
+@keyframes beat {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
