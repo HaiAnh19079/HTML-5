@@ -120,8 +120,9 @@
                             <ul class="nav-list">
                                 <li class="nav-item">
                                     <a
+                                        id="home"
                                         href="https://haianh19079.github.io/HTML-5/"
-                                        class="nav-link"
+                                        class="nav-link active"
                                     >
                                         Home
                                     </a>
@@ -186,11 +187,13 @@
                                 data-aos-easing="linear"
                             >
                                 <input
-                                    class="hero-input"
-                                    type="email"
+                                    class="hero-input email-input"
+                                    type="text"
                                     name="email"
                                     id="email"
                                     placeholder="Your email address"
+                                    required
+                                    pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$"
                                 />
                                 <button
                                     class="btn btn--primary form-submit-btn"
@@ -198,6 +201,7 @@
                                 >
                                     Get Started
                                 </button>
+
                                 <span class="form-note">
                                     *We’ll respect the inbox and never share
                                     your email.
@@ -1401,8 +1405,10 @@
                             >
                                 <input
                                     type="email"
-                                    class="form__input-email section-desc-16"
+                                    class="form__input-email email-input section-desc-16"
                                     placeholder="Email address..."
+                                    required
+                                    pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$"
                                 />
                                 <button
                                     type="submit"
@@ -1419,11 +1425,16 @@
                         data-aos-duration="600"
                         data-aos-easing="linear"
                     >
-                        <span class="footer-link footer-email-address">
+                        <a
+                            href="mailto:email@gmail.com"
+                            class="footer-link footer-email-address"
+                        >
                             email@gmail.com
-                        </span>
-                        <span class="footer-link footer-phone"
-                            >(123) 456-7890</span
+                        </a>
+                        <a
+                            href="tel:+1234567890"
+                            class="footer-link footer-phone"
+                            >(123) 456-7890</a
                         >
                     </div>
                 </div>

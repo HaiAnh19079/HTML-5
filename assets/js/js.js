@@ -1,8 +1,39 @@
 const navLinkItems = document.querySelectorAll('.nav-link');
-
+const logo = document.querySelector('.logo-img')
 //nav
-navLinkItems.forEach((item) => {
+
+
+// Hàm để đặt 'active' cho link 'Home'
+function setActiveLink() {
+    const currentUrl = window.location.href;
+    console.log(currentUrl);
+    navLinkItems.forEach((item) => {
+        console.log(item.href)
+        // Kiểm tra URL hiện tại có khớp với href của thẻ 'nav-link'
+        if (item.href === currentUrl || (item.id === 'home' && currentUrl.includes('#home'))) {
+            item.classList.add('active');
+        } else {
+            item.classList.remove('active');
+        }
+    });
+}
+
+// Gọi hàm để kiểm tra khi tải trang
+window.addEventListener('load', setActiveLink);
+
+if (logo) {
+    logo.addEventListener('click', () => {
+        navLinkItems.forEach((navLink) => {
+            navLink.classList.remove('active');
+        });
+        document.querySelector('#home').classList.add('active');
+    });
+}
+navLinkItems.forEach((item, i) => {
+
+
     item.addEventListener('click', () => {
+
         if (!item.classList.contains('active')) {
             navLinkItems.forEach((navLink) => {
                 navLink.classList.remove('active');
@@ -13,6 +44,19 @@ navLinkItems.forEach((item) => {
 
 })
 
+const heroForm = document.querySelectorAll('.hero-form');
+const emailInput = document.querySelector('.email-input');
+const errorMsg = document.getElementById('errorMsg');
+
+heroForm.addEventListener('submit', (e) => {
+    if (emailInput.value.includes(' ')) {
+        e.preventDefault();
+    }
+})
+
+emailInput.addEventListener('input', () => {
+    emailInput.value = emailInput.value.replace(/\s/g, '');
+});
 
 const feedbackList = document.querySelector('.feedback-list')
 const feedbackItems = document.querySelectorAll('.feedback-item')
